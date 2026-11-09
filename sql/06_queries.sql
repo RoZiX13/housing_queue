@@ -6,3 +6,8 @@ SELECT *
      organization,
      reason = 'ИТОГО по всем основаниям',
      reason;
+
+-- Проверка прав на таблицу housing_queue
+SELECT grantee, privilege_type
+FROM information_schema.table_privileges
+WHERE table_name = 'housing_queue';

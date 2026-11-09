@@ -1,3 +1,12 @@
+-- Пользователь с полными правами (администратор БД)
+CREATE ROLE housing_admin WITH LOGIN PASSWORD 'StrongAdminPass123';
+
+-- Пользователь для ввода данных (оператор)
+CREATE ROLE housing_operator WITH LOGIN PASSWORD 'OperatorPass456';
+
+-- Пользователь для просмотра отчетов (аналитик)
+CREATE ROLE housing_analyst WITH LOGIN PASSWORD 'AnalystPass789';
+
 -- Администратор: все права на все таблицы и последовательности
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO housing_admin;
 GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO housing_admin;
